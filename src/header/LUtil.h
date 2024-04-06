@@ -4,10 +4,12 @@
 #include "LOpenGL.h"
 
 // Screen constants
-
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 const int SCREEN_FPS = 60;
+
+const int COLOR_MODE_CYAN = 0;
+const int COLOR_MODE_MULTI = 1;
 
 // Functions
 bool initGL();
@@ -34,5 +36,14 @@ void render();
 // Side
 // Clear the color buffer
 // swap front and back buffer
+
+void handleKeys(unsigned char key, int x, int y);
+// Pre
+// None
+// Post
+// Toggles color mode when q is pressed
+// cycles through different projection scales when e is pressed
+// Side
+// If user presses e, matrix mode is set to projection
 
 #endif // LUTIL_H_
